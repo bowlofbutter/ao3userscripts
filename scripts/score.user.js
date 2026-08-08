@@ -7,8 +7,8 @@
 // @require     https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js
 // @include     http://archiveofourown.org/*
 // @include     https://archiveofourown.org/*
-// @downloadURL https://raw.githubusercontent.com/bowlofbutter/ao3userscripts/main/scripts/score.js
-// @updateURL https://raw.githubusercontent.com/bowlofbutter/ao3userscripts/main/scripts/score.js
+// @downloadURL https://raw.githubusercontent.com/bowlofbutter/ao3userscripts/main/scripts/score.user.js
+// @updateURL https://raw.githubusercontent.com/bowlofbutter/ao3userscripts/main/scripts/score.user.js
 // ==/UserScript==
 
 // Configuration object: centralizes all settings for easier management
