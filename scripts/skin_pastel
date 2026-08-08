@@ -1,0 +1,1838 @@
+dl.meta {
+  border: 2px solid #252542 !important;
+  border-radius: 0.75em !important;
+  margin-left: 10px;
+  padding: 20px !important;
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: #e49494;
+  color: #252542;
+}
+
+#main {
+  background: #1A1A2E;
+}
+
+body {
+  font-size: 11pt;
+}
+
+#workskin img {
+  border-radius: 1rem;
+}
+
+#worskin p {
+  font-size: 12pt;
+}
+
+a.tag:hover,
+.listbox .heading a.tag:visited:hover {
+  background: transparent;
+}
+
+#header h1.heading span {
+  display: none;
+}
+
+#header .heading sup {
+  visibility: hidden;
+}
+
+#header h1.heading a::before {
+  font-family: "Lucida Handwriting", cursive;
+  margin-left: 1em;
+  font-weight: bold;
+  content: "Back from horny jail";
+}
+
+.menu.dropdown-menu {
+  border: 2px solid #252542 !important;
+  border-radius: 0.75em !important;
+  padding: 8px !important;
+  box-sizing: border-box;
+}
+
+#header .menu li {
+  border-bottom: 0px;
+}
+
+li.comment,
+.thread .even {
+  border-radius: .75em;
+  border: 1px solid #e49494;
+  padding: 10px;
+  background: #1A1A2Eba;
+}
+
+li.comment,
+.thread .odd {
+  border-radius: .75em;
+  border: 1px solid #e49494;
+  padding: 10px;
+  background: #1A1A2Eba;
+}
+
+li.comment {
+  border-radius: .75em;
+  border: 1px solid #e49494;
+  padding: 10px;
+  background: #1A1A2Eba;
+}
+
+.btn:hover,
+input[type="submit"]:hover,
+.actions li input[type="submit"]:hover,
+.actions .current:hover {
+  color: #B4C8CE !important;
+  background: #252542 !important;
+}
+
+.actions a:hover,
+.actions li .current a:hover {
+  color: #1A1A2E !important;
+}
+
+.splash .favorite li:nth-of-type(2n+1) a {
+  background: #1A1A2E;
+}
+
+.splash .favorite li:nth-of-type(2n+1) a {
+  background: #252542;
+}
+
+.splash .favorite li:nth-of-type(2n+1) a:hover {
+  color: #1A1A2E !important;
+  background-image: linear-gradient(90deg, rgba(254,172,94,1) 0%, rgba(199,121,208,1) 35%, rgba(75,192,200,1) 100%);
+}
+
+body {
+  background: #252542 !important;
+  color: #B4C8CE !important;
+}
+
+a {
+  transition: 0.2s ease-in-out !important;
+}
+
+body,
+th,
+tr:hover,
+col.name,
+form blockquote.userstuff,
+input:focus,
+input,
+select:focus,
+select,
+textarea:focus,
+textarea,
+.autocomplete div.dropdown ul,
+#ui-datepicker-div,
+#ibox_wrapper,
+#ibox_content,
+.toggled form,
+.dynamic form,
+.secondary,
+.listbox .index,
+.dashboard .listbox .index,
+.nomination dt {
+  background: #1A1A2E;
+  font-family: "Trebuchet MS","Gill Sans", "Gill Sans MT", Calibri, sans-serif !important;
+  color: #B4C8CE;
+}
+
+#outer.wrapper {
+  background-color: #1A1A2E !important;
+}
+
+.bookmark .count a {
+  color: #1A1A2E !important;
+}
+
+.comment_notice,
+ul.notes,
+.caution,
+.error,
+.comment_error,
+.alert.flash {
+  color: #B4C8CE;
+  background-color: #ce4c4c;
+  border: none;
+  box-shadow: none;
+  margin-top: 10px !important;
+}
+
+#header .search input[type="text"],
+#header .search input[type="text"]:focus {
+  color: #B4C8CE !important;
+}
+
+#header .logo {
+  display: none;
+}
+
+.home .header h2 {
+  border-bottom: 0px;
+}
+
+.subscription dd {
+  background-color: transparent !important;
+}
+
+#dashboard .actions a,
+#dashboard .actions a:visited {
+  color: #B4C8CE !important;
+}
+
+.blurb ul.required-tags {
+  background: #252542 !important;
+  width: 0px;
+}
+
+.filters dl {
+  background: transparent;
+}
+
+#dashboard .actions .current {
+  color: #B4C8CE !important;
+  background: #1A1A2E;
+}
+
+.announcement .userstuff h2 {
+  margin-top: 10px;
+  color: #1A1A2E;
+}
+
+fieldset fieldset,
+fieldset dl dl,
+.fieldset,
+fieldset {
+  border-radius: 0.75em;
+  background: #1A1A2E;
+}
+
+#header .user a,
+#header .user a:visited {
+  margin: 2px;
+  color: #B4C8CE !important;
+}
+
+.picture .header {
+  border: none;
+}
+
+li.comment,
+.thread .even {
+  border-radius: 0.75em;
+}
+
+.bookmark div.user {
+  border-radius: 0.5em;
+}
+
+.blurb .header .heading {
+  background: transparent !important;
+}
+
+.blurb .stats {
+  color: #f7f7f7;
+}
+
+.module .heading h4,
+.module .heading h5,
+h5.module .fandoms .heading,
+.meta .stats,
+.meta .stats dl dt,
+.meta .stats dl dd,
+.dashboard .own .work {
+  background: transparent !important;
+}
+
+h5.heading,
+.user .datetime,
+.bookmark .user .userstuff,
+.bookmark .user .meta {
+  margin: 10px;
+}
+
+.reading h4.viewed {
+  background: #252542;
+  border: 1px solid #B4C8CE;
+  padding: 0.5em;
+  border-radius: 0.25em;
+}
+
+.posted {
+  font-size: 0.8em;
+}
+
+#header .menu,
+#header .menu li a:link,
+#header .menu li a:visited {
+  border-radius: 0.75em;
+  background: #252542 !important;
+  color: #B4C8CE !important;
+  border: none;
+}
+
+#header .menu li a:hover,
+#header .dropdown:hover a {
+  background: #1a1a2e !important;
+}
+
+li.blurb {
+  border-radius: 0.75em;
+  background: #252542;
+  border: none;
+}
+
+.filters .submit input {
+  height: 100%;
+  margin: 1em 0;
+  min-height: 1.286em;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+  color: #1A1A2E;
+  background: #B4C8CE;
+}
+
+#header #search>* {
+  width: 70%;
+  white-space: nowrap;
+  margin-right: 60px;
+}
+
+form.verbose legend,
+.verbose form legend {
+  height: auto;
+  width: auto;
+  font-size: 100%;
+  background-image: linear-gradient(90deg, rgba(254,172,94,1) 0%, rgba(199,121,208,1) 35%, rgba(75,192,200,1) 100%);
+  color: #1A1A2E;
+  border: none;
+  padding: 0.5em;
+  box-shadow: none;
+  opacity: 1;
+  margin: 10px;
+  border-radius: 0.5em;
+}
+
+.actions input[type="text"],
+.actions input[type="text"]:focus,
+.textarea,
+.autocomplete input,
+form.search input[type="text"],
+form.search input[type="text"]:focus,
+li.search fieldset,
+.search input[type="text"],
+.search input[type="text"]:focus {
+  color: #9e9e9e;
+  background: #1A1A2E;
+  border: 1px solid #B4C8CE;
+  border-radius: 0.25em;
+  box-shadow: none;
+  font: 90%;
+  padding: 5px;
+  width: 90%;
+  -webkit-appearance: none;
+}
+
+.input,
+.highlighted {
+  border: none;
+}
+
+.filters input:checked+.indicator+span {
+  text-decoration: underline;
+  font-weight: normal;
+}
+
+#header .actions a:hover,
+#header .actions a:focus,
+#header .dropdown:hover a,
+#header .open a,
+#header .menu,
+#small_login,
+#header .dropdown:hover .current+.menu,
+.actions a,
+.actions a:link,
+.actions a:active,
+.actions a:visited,
+.current span,
+.current,
+a.current,
+.actions .current,
+.current,
+.current a:visited,
+.current a:link,
+#dashboard .current,
+.actions a:active,
+span.unread,
+.replied,
+span.claimed,
+.own,
+.unread,
+.child,
+.unwrangled,
+.unreviewed {
+  color: #e49494;
+  border: 1px solid #e49494;
+  background-image: none;
+  border-radius: 0.25em;
+  box-shadow: none;
+}
+
+dl.index dd {
+  color: #B4C8CE;
+}
+
+.draft,
+.draft .wrapper {
+  color: #B4C8CE;
+}
+
+#header h2,
+#footer ul,
+#footer ul.navigation a,
+.autocomplete .dropdown ul li:hover,
+li.selected {
+  color: #1A1A2E;
+}
+
+a.tag:hover,
+.listbox .heading a.tag:visited:hover {
+  background-image: linear-gradient(90deg, rgba(254,172,94,1) 0%, rgba(199,121,208,1) 35%, rgba(75,192,200,1) 100%);
+}
+
+tbody tr,
+thead td,
+#header #small_login,
+fieldset,
+form dl,
+fieldset dl dl,
+fieldset fieldset fieldset,
+fieldset fieldset dl dl,
+dd.hideme,
+form blockquote.userstuff,
+form dt,
+.actions a:active,
+.current,
+a.current,
+.current a:visited,
+.search span.tip {
+  border-color: #252542;
+}
+
+.heading a,
+.userstuff,
+.heading,
+#heading h3,
+.splash .module h3 {
+  color: #B4C8CE;
+}
+
+.listbox>.heading {
+  color: #B4C8CE;
+  padding: 10px;
+  padding-left: 15px;
+}
+
+.listbox .index {
+  background: #252542;
+}
+
+a.tag {
+  border-bottom: none;
+  border-radius: 8px;
+  padding: 3px;
+}
+
+.actions a,
+.actions a:link,
+.actions a:visited,
+.current,
+a.current,
+.current a:visited,
+.current a:link {
+  color: #1A1A2E !important;
+  background: #B4C8CE;
+  border: none;
+  border-bottom: none;
+  background-image: none;
+  border-radius: 0.25em;
+  box-shadow: none;
+}
+
+.listbox {
+  border: none;
+  border-radius: 0.5em;
+}
+
+.actions a:hover,
+.actions li .current a:hover {
+  background: #252542 !important;
+  color: #B4C8CE !important;
+  border: none;
+  border-bottom: none;
+  background-image: none;
+  border-radius: 0.25em;
+  box-shadow: none;
+}
+
+.action.top,
+.action a:link {
+  background: #B4C8CE;
+  color: #1A1A2E;
+  height: auto;
+  font-weight: bolder;
+  padding: 0.15em 0.25em;
+}
+
+.splash .module h3 {
+  border-bottom: none;
+  font-variant: small-caps;
+  font-size: 1.914em;
+}
+
+.title {
+  font-variant: small-caps;
+}
+
+form .notice,
+form ul.notes {
+  box-shadow: none;
+}
+
+.actions a,
+.action,
+.actions input,
+input[type="submit"],
+button,
+.current,
+.actions label,
+li.relationships,
+li.relationships a,
+.thread .even,
+.preface h3 {
+  background-color: transparent;
+}
+
+a:hover,
+.splash .browse a:hover {
+  color: #e49494;
+}
+
+#login-block,
+li.blurb,
+fieldset,
+form dl,
+#symbols-key dl,
+.toggled form,
+.dynamic form,
+div.comment,
+li.comment,
+.comment div.icon,
+.autocomplete div.dropdown ul,
+#modal,
+.bookmark p.count span,
+.ui-sortable li:hover,
+.actions a:hover,
+.actions input:hover,
+.userstuff blockquote {
+  border-color: #252542;
+}
+
+fieldset,
+form dl,
+fieldset dl dl,
+fieldset fieldset fieldset,
+fieldset fieldset dl dl,
+dd.hideme,
+form blockquote.userstuff {
+  box-shadow: none;
+}
+
+#header .actions a:hover,
+#header .actions a:focus,
+#header .dropdown:hover a,
+#header .open a,
+#header .menu,
+#small_login,
+#header .dropdown:hover .current+.menu,
+#dashboard .current,
+.actions a:active,
+.current,
+a.current,
+.current a:visited,
+span.unread,
+.replied,
+span.claimed,
+dl.index dd,
+.own,
+.draft,
+.draft .wrapper,
+.unread,
+.child,
+.unwrangled,
+.unreviewed {
+  background: #252542;
+}
+
+#bookmark-form {
+  background: #252542;
+}
+
+#dashboard.own,
+#dashboard .secondary,
+#dashboard ul.navigation {
+  background: transparent !important;
+}
+
+#dashboard.own {
+  border-top: none;
+  border-bottom: none;
+}
+
+#dashboard ul {
+  padding: 10px 0;
+  border-top: 0px;
+}
+
+.actions a,
+.action,
+.actions input,
+input[type="submit"],
+button,
+.current,
+.actions label,
+a.cloud4,
+a.cloud5 {
+  color: #B4C8CE;
+}
+
+a:visited,
+a.cloud6 {
+  color: #B4C8CE;
+}
+
+thead,
+tfoot,
+tfoot td,
+th,
+tr:hover,
+col.name,
+input,
+textarea,
+#modal .content,
+.actions a,
+.action,
+.actions input,
+input[type="submit"],
+button,
+.current,
+.actions label,
+span.unread,
+.replied,
+span.claimed,
+.system .latest h3,
+.system div.news h3,
+.listbox,
+fieldset fieldset.listbox,
+dl.meta,
+.picture .header,
+.bookmark .user {
+  border-color: #e49494;
+  background: #1A1A2E;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+li.blurb,
+.blurb .blurb,
+.listbox .index,
+.dashboard .listbox .index {
+  box-shadow: 3px 0px 0px #C779D0, -3px 0px 0px #e49494;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+#header ul.primary {
+  box-shadow: 3px 0px 0px #C779D0, -3px 0px 0px #e49494;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 95%;
+  margin: 0px auto;
+  float: none;
+  display: table;
+  border-radius: 25px;
+  background-image: linear-gradient(90deg, rgba(254,172,94,1) 0%, rgba(199,121,208,1) 35%, rgba(75,192,200,1) 100%);
+}
+
+#header .dropdown a {
+  background: #1A1A2E;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding: 8px;
+}
+
+#header .dropdown,
+#header .dropdown a,
+#header .dropdown a:hover {
+  color: #e49494 !important;
+}
+
+#header .dropdown .menu .current {
+  background-color: #B4C8CE;
+  color: #252542;
+}
+
+#workskin {
+  background: url(https://64.media.tumblr.com/cd7582f1b31617882a855b221328827f/1cd8803307814ce8-40/s640x960/6c0be980ab25841d0ab9d4af00fed203910af65c.png);
+  background-repeat: repeat-x;
+}
+
+#workskin img {
+  max-width: 95%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.autocomplete div.dropdown ul {
+  border: 1px solid #B4C8CE;
+  border-radius: 0.5em;
+}
+
+table,
+thead td,
+#header #small_login,
+fieldset fieldset fieldset,
+fieldset fieldset dl dl,
+dd.hideme {
+  background-image: linear-gradient(90deg, rgba(254,172,94,1) 0%, rgba(199,121,208,1) 35%, rgba(75,192,200,1) 100%) !important;
+  color: #252542 !important;
+  transition: 0.1s !important;
+}
+
+fieldset dl dl {
+  color: #B4C8CE !important;
+}
+
+form blockquote.userstuff,
+.ui-sortable li:hover,
+.listbox,
+fieldset fieldset.listbox,
+.readings-index h3,
+.search span.tip,
+.flash,
+.notice,
+.error,
+.comment_error {
+  background-image: linear-gradient(90deg, rgba(254,172,94,1) 0%, rgba(199,121,208,1) 35%, rgba(75,192,200,1) 100%);
+  color: #1A1A2E;
+}
+
+.comment h4.byline {
+  background: transparent;
+}
+
+body,
+#main.error,
+#main.slow,
+#main.maintenance,
+.required .autocomplete,
+.autocomplete .notice,
+.post .required .warnings,
+.listbox .heading a:visited,
+.userstuff h2,
+.userstuff caption,
+.userstuff table,
+.userstuff td,
+.userstuff col,
+.userstuff tr,
+.userstuff thead,
+.userstuff tfoot,
+.userstuff tbody,
+.userstuff th,
+.userstuff thead td,
+.userstuff th a,
+.userstuff th a:link,
+a.cloud3 {
+  color: #B4C8CE;
+}
+
+.listbox h3 {
+  color: #1A1A2E !important;
+}
+
+.draft {
+  border-color: #B4C8CE;
+}
+
+.actions a,
+.action,
+.action:link,
+.actions input,
+input[type="submit"],
+button,
+.current,
+.actions label,
+span.unread,
+.replied,
+span.claimed {
+  border-bottom-color: #B4C8CE;
+}
+
+.ui-sortable li:hover,
+.secondary,
+.wrapper,
+.ui-draggable form {
+  box-shadow: none;
+}
+
+#header #small_login {
+  box-shadow: none;
+}
+
+.delete a,
+span.delete {
+  box-shadow: none;
+}
+
+#header .primary .menu .current {
+  color: #00273d !important;
+}
+
+a,
+a:link,
+a:visited:hover,
+#dashboard span,
+.autocomplete div.dropdown ul,
+.actions a:visited,
+.actions a:active,
+.current,
+a.current,
+.current a:visited,
+a.tag,
+.tags a,
+a.cloud1,
+a.cloud2 {
+  border-bottom: none;
+  color: #e49494;
+}
+
+.userstuff h3,
+#header .primary a,
+#header .primary .current,
+#header .primary input,
+#header .search input {
+  border-color: #00273d;
+}
+
+.userstuff h3 {
+  border-bottom: 0px;
+  font-size: 1.8em;
+}
+
+.userstuff h2 {
+  font-size: 2em;
+}
+
+.actions a:active,
+.current,
+a.current,
+.current a:visited {
+  box-shadow: none;
+}
+
+a.tag:hover {
+  color: #1A1A2E !important;
+  background-image: linear-gradient(90deg, rgba(254,172,94,1) 0%, rgba(199,121,208,1) 35%, rgba(75,192,200,1) 100%);
+}
+
+.autocomplete .dropdown ul li:hover,
+li.selected {
+  background: #B4C8CE;
+}
+
+#header #greeting img,
+#header .heading a,
+#header fieldset,
+#header form,
+#header p,
+#header .user a:hover,
+#header .user a:focus,
+#header .user .current,
+.actions input:hover,
+.delete a,
+span.delete,
+span.unread,
+.replied,
+span.claimed,
+.draggable,
+.droppable,
+span.requested,
+a.work,
+.blurb h4 a:link,
+.blurb h4 img,
+.system .latest h3,
+.system div.news h3,
+.system .tweets h3,
+.required,
+.error,
+a.cloud7,
+a.cloud8 {
+  color: #B4C8CE;
+}
+
+#outer #header #greeting .icon,
+.error,
+.comment_error,
+.LV_invalid,
+.LV_invalid_field,
+input.LV_invalid_field:hover,
+input.LV_invalid_field:active,
+textarea.LV_invalid_field:hover,
+textarea.LV_invalid_field:active,
+#header .primary a,
+#header .primary .current,
+#header .primary input,
+#header .search input {
+  border-color: #B4C8CE;
+}
+
+.unread,
+#dashboard span,
+#dashboard.own,
+fieldset.actions,
+fieldset dl fieldset dl,
+.dynamic form fieldset,
+.toggled form fieldset,
+.toggled form dl,
+.secondary .toggled form,
+.dashboard .own,
+.mods li,
+dl.stats dt,
+.blurb .header .heading,
+.blurb .header ul,
+.blurb .header p.status,
+fieldset.comments,
+.userstuff table,
+.userstuff td,
+.userstuff col,
+.userstuff tr,
+.userstuff thead,
+.userstuff tfoot,
+.userstuff tbody,
+.userstuff th,
+.userstuff thead td,
+.userstuff th a,
+.userstuff th a:link {
+  background: #1A1A2E;
+}
+
+fieldset dl,
+fieldset.actions,
+fieldset dl fieldset dl,
+.dynamic form fieldset,
+.toggled form fieldset,
+.toggled form dl,
+.secondary .toggled form,
+.actions a,
+.action,
+.actions input,
+.action:link input[type="submit"],
+button,
+.current,
+.actions label,
+#outer.wrapper,
+#inner.wrapper,
+dl.index,
+dl.stats,
+.listbox,
+fieldset fieldset.listbox,
+.listbox li.blurb,
+fieldset.comments,
+dl.nomination {
+  box-shadow: none;
+}
+
+h2,
+.system p#signup,
+#header h2 {
+  text-shadow: none;
+}
+
+#header h2 {
+  background-image: linear-gradient(90deg, rgba(254,172,94,1) 0%, rgba(199,121,208,1) 35%, rgba(75,192,200,1) 100%);
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+
+.dashboard .listbox {
+  border: 1px solid #e49494;
+}
+
+.comment fieldset {
+  border: 0px;
+}
+
+#greeting img.icon {
+  border-radius: 2em;
+  height: 2.5em;
+  width: 2.5em;
+}
+
+.primary .icon,
+.icon {
+  border-radius: 30px;
+  height: 7em;
+  width: 7em;
+  transition: 0.2s;
+}
+
+.icon:hover {
+  border-radius: 10px;
+}
+
+.picture .icon img {
+  border-radius: 30px;
+  height: 7em;
+  width: 7em;
+  margin: -8px;
+}
+
+.icon {
+  padding: 5px;
+}
+
+.comment div.icon {
+  border-bottom: 0px;
+}
+
+span.symbol {
+  color: #B4C8CE;
+  background: #1A1A2E;
+  border: 1px solid;
+  vertical-align: super;
+  border-radius: 0.75em;
+  box-shadow: none;
+}
+
+.notice {
+  border: 1px solid #B4C8CE;
+  color: #B4C8CE;
+  background: #1A1A2E;
+  box-shadow: none;
+  padding: 1em;
+}
+
+#modal-bg {
+  background: #B4C8CE;
+}
+
+.characters a:before,
+.relationships a:before,
+.freeforms a:before,
+.meta a:before {
+  color: #B4C8CE;
+  content: "\2666";
+  padding: 0 0.25em 0 0;
+}
+
+.splash .browse li a:before {
+  color: #B4C8CE;
+  content: "\2666";
+  padding: 0 0.25em 0 0;
+}
+
+.kudos a:before {
+  color: #B4C8CE;
+  content: "\2666";
+  padding: 0 0.25em 0 0;
+}
+
+.btn,
+input[type="submit"],
+.actions li a,
+.actions li input,
+.actions li input[type="submit"],
+.actions li .current,
+.actions li label,
+.action:link {
+  color: #1A1A2E;
+  background: #B4C8CE;
+  border: none !important;
+  border-bottom: none;
+  background-image: none;
+  border-radius: 0.25em;
+  box-shadow: none;
+}
+
+input[type="submit"],
+input[type="submit"]:hover {
+  border: none;
+}
+
+.btn:hover,
+input[type="submit"]:hover,
+.actions li input[type="submit"]:hover,
+.actions .current:hover {
+  color: #B4C8CE;
+  background: #1A1A2E;
+  border: none;
+  border-bottom: none;
+  background-image: none;
+  border-radius: 0.25em;
+  box-shadow: none;
+}
+
+.tags input[type="radio"],
+.filters [type="radio"]+.indicator::before,
+.filters [type="radio"]+.indicator::before {
+  color: #B4C8CE;
+  background: #1A1A2E;
+  border: 1px solid #B4C8CE;
+  border-radius: 1em;
+  box-shadow: none;
+}
+
+.filters [type="radio"]:checked+.indicator::after,
+.filters [type="checkbox"]:checked+.indicator::after,
+[type="radio"]:checked+.indicator::after {
+  color: #B4C8CE;
+  background: #B4C8CE;
+}
+
+#header .primary>li:first-of-type {
+  margin-left: 2em;
+}
+
+#dashboard a {
+  background: transparent;
+}
+
+.unread,
+#dashboard span,
+fieldset dl,
+fieldset.actions,
+fieldset dl fieldset dl,
+.dynamic form fieldset,
+.toggled form fieldset,
+.toggled form dl,
+.secondary .toggled form,
+.dashboard .own,
+.mods li,
+dl.stats dt,
+.blurb .header .heading,
+.blurb .header ul,
+.blurb .header p.status,
+fieldset.comments,
+.userstuff table,
+.userstuff td,
+.userstuff col,
+.userstuff tr,
+.userstuff thead,
+.userstuff tfoot,
+.userstuff tbody,
+.userstuff th,
+.userstuff thead td,
+.userstuff th a,
+.userstuff th a:link {
+  background: #252542;
+}
+
+.assignment dl.stats,
+.assignment dl.stats dt,
+.assignment dl.stats dd,
+dl.stats,
+dl.stats dt {
+  background: transparent;
+  color: #f7f7f7;
+}
+
+.assignment .index dt {
+  margin-bottom: 5px;
+}
+
+.blurb dl.stats {
+  background: #252542;
+  margin-bottom: 5px;
+}
+
+.byline.heading {
+  color: #B4C8CE;
+}
+
+#dashboard {
+  border: 2px solid #252542 !important;
+  border-radius: 0.75em !important;
+  margin-left: 10px;
+  background: transparent;
+  padding: 20px !important;
+  box-sizing: border-box;
+}
+
+.userstuff p {
+  color: #B4C8CE;
+  outline: none;
+  font-size: 11pt;
+}
+
+.user .datetime {
+  color: #f7f7f7;
+}
+
+.preface blockquote {
+  border: 0;
+  font-size: xx-small;
+}
+
+ul.series,
+ul.series li {
+  color: #f7f7f7;
+}
+
+.own .header,
+.inbox .actions,
+.inbox .comments,
+.pseud .header,
+.collection .header {
+  background-color: transparent;
+}
+
+.own .type {
+  color: #f7f7f7;
+}
+
+.faq .example,
+.guideline .example {
+  border: 0px;
+  background-color: #252542;
+  border-radius: 5px;
+}
+
+.comment .icon .visitor {
+  background: url(/images/imageset.png) no-repeat -1px -76px;
+  padding: 0px;
+  margin: 5px;
+}
+
+.skins .primary .icon,
+.admin .primary .icon {
+  padding: 0px;
+  margin: 10px;
+}
+
+.bookmark .count a {
+  color: #B4C8CE;
+}
+
+.announcement .userstuff {
+  background-image: linear-gradient(90deg, rgba(254,172,94,1) 0%, rgba(199,121,208,1) 35%, rgba(75,192,200,1) 100%);
+  border-color: #e49494;
+  color: #fff;
+}
+
+.announcement .userstuff p {
+  color: #fff;
+}
+
+.announcement input[type="submit"],
+.announcement .action {
+  background: #fff none;
+  border: 1px solid #ce4c4c;
+  color: #f7f7f7;
+  font-size: 0.875em;
+  padding: 0.25em 0.5em;
+  border-radius: 2em;
+}
+
+input[name="preview_button"] {
+  color: #1A1A2E;
+  background-image: none;
+  border: none;
+  border-bottom: none;
+  border-radius: 0.25em;
+  box-shadow: none;
+}
+
+input[name="post_button"] {
+  color: #1A1A2E;
+  background-image: none;
+  border: none;
+  border-bottom: none;
+  border-radius: 0.25em;
+  box-shadow: none;
+}
+
+input[name="preview_button"]:hover {
+  color: #1A1A2E !important;
+  background-image: none;
+  border: none;
+  border-bottom: none;
+  border-radius: 0.25em;
+  box-shadow: none;
+}
+
+input[name="post_button"]:hover {
+  color: #1A1A2E !important;
+  background-image: none;
+  border: none;
+  border-bottom: none;
+  border-radius: 0.25em;
+  box-shadow: none;
+}
+
+#footer {
+  background: #252542 !important;
+  color: #B4C8CE;
+  border-top: none !important;
+}
+
+#footer .heading,
+#footer ul,
+#footer ul.navigation a {
+  color: #B4C8CE !important;
+}
+
+#footer a:hover {
+  box-shadow: none;
+}
+
+.event.announcement .userstuff a,
+.filters .expander {
+  color: #B4C8CE;
+}
+
+.kudos_error {
+  background: #1A1A2E;
+  border-color: #e49494;
+  box-shadow: none;
+}
+
+.blurb ul.required-tags li span {
+  border-radius: 5px;
+}
+
+.bookmark .status span,
+.bookmark .status a {
+  border-radius: 5px;
+}
+
+a.tag {
+  background-color: #1a1a2ea6 !important;
+  margin-bottom: 0px;
+  line-height: 23px;
+  padding: 3px 5px 3px 5px;
+}
+
+.warnings,
+.warning .tags,
+.characters,
+.characters .tags,
+.relationships,
+.relationships .tags {
+  color: transparent;
+}
+
+.warnings a,
+.warning .tags a {
+  color: #FEAC5E;
+}
+
+.relationships a,
+.relationships .tags a {
+  color: #1A1A2E !important;
+  background-image: linear-gradient(90deg, rgba(254,172,94,1) 0%, rgba(199,121,208,1) 35%, rgba(75,192,200,1) 100%) !important;
+}
+
+.characters a,
+.characters .tags a {
+  background-color: #0b23248c !important;
+  color: #4bc0c8 !important;
+}
+
+.statistics .index li:nth-of-type(2n) {
+  background: transparent;
+}
+
+.listbox > .heading {
+  color: #1A1A2E;
+}
+
+.logged-in .splash > .module {
+  float: left;
+  margin: auto;
+  width: 90%;
+}
+
+form dl {
+  background-color: #1a1a2e;
+}
+
+form dd.required {
+  color: #B4C8CE;
+}
+
+.required-tags .rating-notrated,
+.required-tags .rating-general-audience,
+.required-tags .rating-explicit,
+.required-tags .rating-mature,
+.required-tags .rating-teen,
+.required-tags .category-femslash,
+.required-tags .category-gen,
+.required-tags .category-slash,
+.required-tags .category-none,
+.required-tags .category-het,
+.required-tags .category-multi,
+.required-tags .category-other,
+.required-tags .complete-no,
+.required-tags .complete-yes,
+.required-tags .warning-yes,
+.required-tags .warning-no,
+.required-tags .warning-choosenotto,
+.required-tags .external-work,
+.status .private .text,
+.status .public,
+.status .hidden,
+.status .rec,
+.status .count,
+.index .skins .icon,
+.index .mystery .icon,
+.index .tag .icon,
+.index .tagset .icon,
+.comment .icon .anonymous,
+.comment .icon .visitor,
+.abbreviated .icon .anonymous,
+.abbreviated .icon .visitor,
+.skins .primary .icon,
+.admin .primary .icon,
+.tagset .primary .icon,
+.tag .primary .icon,
+a.rss span,
+a.rss span::before,
+p.kudos,
+p.kudos::before,
+#symbols-key dl img,
+#bookmark-symbols-key img,
+img[src$="/images/skins/iconsets/default/icon_user.png"],
+img[src$="/images/skins/iconsets/default/icon_collection.png"],
+img[src$="/images/lockblue.png"] {
+  background-image: url("https://images.squidge.org/images/2024/11/16/AO3_imageset_transparent.png");
+  background-size: 200px 835px;
+}
+
+ul.required-tags,
+.bookmark .status span,
+.blurb .icon {
+  opacity: 1 !important;
+}
+
+img[src$="/images/skins/iconsets/default/icon_user.png"] {
+  padding: 100px 0 0 100px;
+  width: 0 !important;
+  height: 0 !important;
+  background-position: 0px -75px;
+  background-color: #5998d6;
+  box-shadow: inset 0 0 0 1.5px;
+  color: #ddd;
+}
+
+.index:not(.comment) .abbreviated img[src$="/images/skins/iconsets/default/icon_user.png"] {
+  padding: 75px 0 0 75px;
+  background-position: 0px -375px;
+}
+
+.index:not(.comment) img[src$="/images/skins/iconsets/default/icon_user.png"] {
+  padding: 55px 0 0 55px;
+  background-position: 0px -525px;
+}
+
+#greeting img[src$="/images/skins/iconsets/default/icon_user.png"] {
+  background-size: 201.5%;
+  padding: 1.786em 0 0 1.786em;
+  background-position: 0px -19.1px;
+}
+
+.comment .icon .anonymous {
+  background-color: #6e6e6e;
+  box-shadow: inset 0 0 0 1.5px;
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.comment .icon .visitor {
+  background-color: #6e6e6e;
+  box-shadow: inset 0 0 0 1.5px;
+  color: rgba(0, 0, 0, 0.15);
+}
+
+img[src$="/images/skins/iconsets/default/icon_collection.png"] {
+  padding: 100px 0 0 100px;
+  width: 0 !important;
+  height: 0 !important;
+  background-position: -100px -175px;
+  background-color: #616C90;
+  box-shadow: inset 0 0 0 1.5px;
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.collection.index img[src$="/images/skins/iconsets/default/icon_collection.png"] {
+  padding: 55px 0 0 55px;
+  background-position: -55px -525px;
+}
+
+.index .tagset .icon,
+.tagset .primary .icon,
+.tag .primary .icon {
+  background-color: #5998d6;
+  box-shadow: inset 0 0 0 1.5px;
+  color: rgba(0, 0, 0, 0.15);
+}
+
+.index .mystery .icon {
+  background-color: #616C90;
+  box-shadow: inset 0 0 0 1.5px #ddd, inset 0 0 0 3px #fff;
+}
+
+.admin .primary .icon {
+  background-color: #5998d6;
+  box-shadow: inset 0 0 0 2px;
+  color: rgba(0, 0, 0, 0.75);
+}
+
+.skins .primary .icon,
+.index .skins .icon {
+  background-color: #5998d6;
+  box-shadow: inset 0 0 0 1.5px;
+  color: #ddd;
+}
+
+#symbols-key dl img,
+#bookmark-symbols-key img {
+  width: 0 !important;
+  height: 0 !important;
+  padding: 25px 0 0 25px;
+}
+
+.blurb ul.required-tags li span,
+.bookmark .status span:not(.status .private),
+#symbols-key dl img,
+#bookmark-symbols-key img {
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0 1.5px;
+}
+
+.required-tags .rating-notrated,
+.required-tags .category-none,
+.required-tags .warning-no,
+.status .count,
+img[src$="/images/skins/iconsets/default/rating-notrated.png"],
+img[src$="/images/skins/iconsets/default/category-none.png"],
+img[src$="/images/skins/iconsets/default/warning-no.png"] {
+  background-position: -150px 0px;
+  background-color: #fff;
+  color: #ddd;
+}
+
+.required-tags .rating-general-audience,
+img[src$="/images/skins/iconsets/default/rating-general-audience.png"] {
+  background-position: -50px -25px;
+  background-color: #08b3bc;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.required-tags .rating-teen,
+img[src$="/images/skins/iconsets/default/rating-teen.png"] {
+  background-position: 0px -25px;
+  background-color: #5998d6;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.required-tags .rating-mature,
+img[src$="/images/skins/iconsets/default/rating-mature.png"] {
+  background-position: -75px -25px;
+  background-color: #e8689b;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.required-tags .rating-explicit,
+img[src$="/images/skins/iconsets/default/rating-explicit.png"] {
+  background-position: -25px -25px;
+  background-color: #a13374;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.required-tags .category-femslash,
+img[src$="/images/skins/iconsets/default/category-femslash.png"] {
+  background-position: -25px 0px;
+  background-color: #e8689b;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.required-tags .category-het,
+img[src$="/images/skins/iconsets/default/category-het.png"] {
+  background-position: -75px 0px;
+  background-color: #a13374;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.required-tags .category-gen,
+img[src$="/images/skins/iconsets/default/category-gen.png"] {
+  background-position: -50px 0;
+  background-color: #08b3bc;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.required-tags .category-slash,
+img[src$="/images/skins/iconsets/default/category-slash.png"] {
+  background-position: 0px 0px;
+  background-color: #5998d6;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.required-tags .category-multi,
+img[src$="/images/skins/iconsets/default/category-multi.png"] {
+  background: conic-gradient(#a13374 90deg, #5998d6 90deg 180deg, #e8689b 180deg 270deg, #08b3bc 270deg) !important;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.required-tags .category-other,
+img[src$="/images/skins/iconsets/default/category-other.png"] {
+  background-position: -125px 0px;
+  background-color: #6e6e6e;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.required-tags .warning-choosenotto,
+img[src$="/images/skins/iconsets/default/warning-choosenotto.png"] {
+  background-position: -125px -25px;
+  background-color: #e8689b;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.required-tags .warning-yes,
+img[src$="/images/skins/iconsets/default/warning-yes.png"] {
+  background-position: -150px -25px;
+  background-color: #a13374;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.required-tags .external-work,
+img[src$="/images/skins/iconsets/default/warning-external-work.png"] {
+  background-position: -75px -50px;
+  background-color: #5998d6;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.required-tags .complete-no,
+img[src$="/images/skins/iconsets/default/complete-no.png"] {
+  background-position: -100px -25px;
+  background-color: #a13374;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.required-tags .complete-yes,
+img[src$="/images/skins/iconsets/default/complete-yes.png"] {
+  background-position: -175px -25px;
+  background-color: #08b3bc;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.status .rec,
+img[src$="/images/skins/iconsets/default/bookmark-rec.png"] {
+  background-position: -100px -50px;
+  background-color: #5998d6;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.status .public,
+img[src$="/images/skins/iconsets/default/bookmark-public.png"] {
+  background-position: -125px -50px;
+  background-color: #5998d6;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.status .private .text,
+img[src$="/images/skins/iconsets/default/bookmark-private.png"] {
+  font-size: inherit;
+  text-indent: -9999px;
+  white-space: nowrap;
+  background-position: -175px -50px;
+  background-color: #000;
+  color: #ddd;
+}
+
+.status .hidden,
+img[src$="/images/skins/iconsets/default/bookmark-hidden.png"] {
+  background-position: -150px -50px;
+  background-color: #e8689b;
+  color: #ddd;
+}
+
+a.rss span,
+p.kudos {
+  background: none;
+}
+
+a.rss span::before {
+  content: "";
+  height: 14px;
+  width: 14px;
+  position: absolute;
+  background-position: -150px -275px;
+  border-radius: 2px;
+  margin: 1px 0 0 -18px;
+  background-color: #e8689b;
+  box-shadow: inset 0 0 0 1px;
+  color: rgba(0, 0, 0, 0.15);
+}
+
+p.kudos::before {
+  content: "";
+  height: 55px;
+  width: 55px;
+  position: absolute;
+  background-position: -110px -580px;
+  margin: -0.5em -0.5em -0.5em -60px;
+  filter: invert(62%) sepia(14%) saturate(1799%) hue-rotate(172deg) brightness(90%) contrast(86%);
+}
+
+img[src$="/images/lockblue.png"] {
+  width: 0 !important;
+  height: 0 !important;
+  padding: 15px 0 0 15px;
+  background-position: -151px -300px;
+  filter: invert(62%) sepia(14%) saturate(1799%) hue-rotate(172deg) brightness(90%) contrast(86%);
+}
+
+#header .logo {
+  content: url("/images/logo.png");
+  filter: brightness(0) saturate(100%) invert(62%) sepia(14%) saturate(1799%) hue-rotate(172deg) brightness(90%) contrast(86%);
+}
+
+#header ul li a[data-method="delete"] {
+  color: #B4C8CE !important;
+  border-radius: 0.75em;
+  padding: 8px 15px;
+  text-decoration: none;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.latest.news.module {
+  display: none;
+}
+
+.logged-in .splash > div:nth-of-type(odd) {
+  clear: none;
+}
+
+.logged-in .splash > .module {
+  float: left;
+  margin: auto;
+  width: 50%;
+}
+
+.favorite.module.odd {
+  width: auto;
+}
+
+.random.readings.module.odd {
+  float: right;
+}
+
+.favorite.module.odd a.tag::before {
+  color: #B4C8CE;
+  content: "\2665";
+  padding: 0 0.25em 0 0;
+}
+
+.social.module {
+  display: none;
+}
+
+.favorite.module.odd {
+  text-align: center;
+}
+
+.favorite.module.odd li {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.random.readings.module.odd {
+  width: auto;
+}
+
+.splash .favorite li a:link {
+  color: #1A1A2E !important;
+  background-image: linear-gradient(90deg, rgba(254,172,94,1) 0%, rgba(199,121,208,1) 35%, rgba(75,192,200,1) 100%);
+}
+
+.splash .favorite li a:hover {
+  color: #1A1A2E !important;
+  background-image: linear-gradient(90deg, rgba(254,172,94,1) 0%, rgba(199,121,208,1) 35%, rgba(75,192,200,1) 100%);
+}
+
+.splash .favorite li a:visited {
+  color: #1A1A2E !important;
+  background-image: linear-gradient(90deg, rgba(254,172,94,1) 0%, rgba(199,121,208,1) 35%, rgba(75,192,200,1) 100%);
+}
+
+.relationships a:before {
+  color: #B4C8CE;
+  content: "\2665 ";
+  padding: 0 0.25em 0 0;
+}
+
+.kudos a:before {
+  color: #B4C8CE;
+  content: "\2665";
+  padding: 0 0.25em 0 0;
+}
+
+dl.work.meta.group {
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+}
+
+.actions a,
+.actions a:link,
+.actions a:visited,
+.actions button,
+.actions input[type="submit"] {
+  color: #1A1A2E !important;
+  background: #B4C8CE;
+  border: none;
+  border-bottom: none;
+  background-image: none;
+  border-radius: 0.25em;
+  box-shadow: none;
+  font-family: "Trebuchet MS","Gill Sans", "Gill Sans MT", Calibri, sans-serif !important;
+}
+
+.actions a:hover,
+.actions button:hover,
+.actions input[type="submit"]:hover {
+  background: #252542 !important;
+  color: #B4C8CE !important;
+  border: none;
+  border-bottom: none;
+  background-image: none;
+  border-radius: 0.25em;
+  box-shadow: none;
+}
+
+blockquote.userstuff {
+  font-family: "Trebuchet MS","Gill Sans", "Gill Sans MT", Calibri,  sans-serif !important;
+}
+
+body,
+.userstuff {
+  font-family: "Trebuchet MS","Gill Sans", "Gill Sans MT", Calibri,  sans-serif !important;
+}
