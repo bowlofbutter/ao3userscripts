@@ -2,12 +2,12 @@
 // @name         AO3 Export Current Work to Notion-Ready HTML
 // @namespace    https://github.com/bowlofbutter/ao3userscripts
 // @version      1.0
-// @description  Opens a small HTML page with the current fic's fields, each in its own element with a CSS class named after the field, for use with "Save to Notion" selector mapping.
+// @description  Opens a HTML page with the current fic's data fields, each in its own element with a CSS class named after the field, for use with "Save to Notion" selector mapping and for easy copy-paste by addig commas between tags
 // @icon         https://archiveofourown.org/favicon.ico
 // @match        https://archiveofourown.org/works/*
 // @grant        none
-// @updateURL    https://raw.githubusercontent.com/bowlofbutter/ao3userscripts/main/scripts/export_data.js
-// @downloadURL  https://raw.githubusercontent.com/bowlofbutter/ao3userscripts/main/scripts/export_data.js
+// @updateURL    https://raw.githubusercontent.com/bowlofbutter/ao3userscripts/main/scripts/export_data.user.js
+// @downloadURL  https://raw.githubusercontent.com/bowlofbutter/ao3userscripts/main/scripts/export_data.user.js
 // @require      https://code.jquery.com/jquery-3.6.0.min.js
 // @grant        none
 // ==/UserScript==
