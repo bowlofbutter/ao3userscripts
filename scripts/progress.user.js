@@ -7,8 +7,8 @@
 // @match        https://archiveofourown.org/*/navigate
 // @match        https://archiveofourown.org/*/chapters/*
 // @match        https://archiveofourown.org/works/*
-// @updateURL    https://raw.githubusercontent.com/bowlofbutter/ao3userscripts/main/scripts/progress.js
-// @udownloadURL https://raw.githubusercontent.com/bowlofbutter/ao3userscripts/main/scripts/progress.js
+// @updateURL    https://raw.githubusercontent.com/bowlofbutter/ao3userscripts/main/scripts/progress.user.js
+// @downloadURL  https://raw.githubusercontent.com/bowlofbutter/ao3userscripts/main/scripts/progress.user.js
 // @require      https://code.jquery.com/jquery-3.6.0.min.js
 // @grant        none
 // @run-at       document-idle
