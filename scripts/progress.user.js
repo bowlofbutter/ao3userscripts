@@ -153,8 +153,8 @@
     bottom: 16px;
     right: 16px;
     z-index: 999999;
-    background: rgba(20, 20, 20, 0.85);
-    color: #fff;
+    background: rgba(37, 37, 66, 0.85);
+    color: #B4C8CE;
     font-family: -apple-system, sans-serif;
     font-size: 12px;
     line-height: 1.4;
@@ -166,7 +166,7 @@
 
   // collapsed view: small round symbol, shown by default
   const collapsedView = document.createElement('div');
-  collapsedView.textContent = '⭐';
+  collapsedView.textContent = '💠';
   collapsedView.style.cssText = `
     width: 36px;
     height: 36px;
