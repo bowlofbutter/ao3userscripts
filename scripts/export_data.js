@@ -7,7 +7,7 @@
 // @match        https://archiveofourown.org/works/*
 // @grant        none
 // @updateURL    https://raw.githubusercontent.com/bowlofbutter/ao3userscripts/main/scripts/export_data.js
-// @udownloadURL https://raw.githubusercontent.com/bowlofbutter/ao3userscripts/main/scripts/export_data.js
+// @downloadURL  https://raw.githubusercontent.com/bowlofbutter/ao3userscripts/main/scripts/export_data.js
 // @require      https://code.jquery.com/jquery-3.6.0.min.js
 // @grant        none
 // ==/UserScript==
