@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AO3 Word Count + Reading Progress
 // @namespace    https://github.com/bowlofbutter/ao3userscripts
-// @version      1.0
+// @version      1.1
 // @description  Adds word counts to chapter links/stats, and a floating reading-progress indicator weighted by real chapter word counts.
 // @author		bowlofbutter
 // @match        https://archiveofourown.org/*/navigate
