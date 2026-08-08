@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         AO3 Word Count + Reading Progress
 // @namespace    https://github.com/bowlofbutter/ao3userscripts
-// @version      1.0
+// @version      1.1
 // @description  Adds word counts to chapter links/stats, and a floating reading-progress indicator weighted by real chapter word counts.
 // @icon         https://archiveofourown.org/favicon.ico
 // @match        https://archiveofourown.org/*/navigate
@@ -165,7 +165,7 @@
 
   // collapsed view: small round symbol, shown by default
   const collapsedView = document.createElement('div');
-  collapsedView.textContent = '💠';
+  collapsedView.textContent = '⭐';
   collapsedView.style.cssText = `
     width: 36px;
     height: 36px;
