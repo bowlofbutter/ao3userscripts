@@ -56,19 +56,32 @@
     var hits = $('dl.stats dd.hits').text().trim();
     var language = $('dl.work.meta.group dd.language').text().trim();
 
-    // Series info (a work can be in multiple series; take the first listed)
-    var $seriesSpan = $('dd.series span.series').first();
-    var seriesTitle = '';
-    var seriesPart = '';
-    var seriesLink = '';
-    if ($seriesSpan.length) {
-      var $seriesAnchor = $seriesSpan.find('a').first();
-      seriesTitle = $seriesAnchor.text().trim();
-      var seriesHref = $seriesAnchor.attr('href') || '';
-      seriesLink = seriesHref.indexOf('http') === 0 ? seriesHref : 'https://archiveofourown.org' + seriesHref;
-      var partMatch = $seriesSpan.text().match(/Part\s+(\d+)/i);
-      seriesPart = partMatch ? partMatch[1] : '';
-    }
+// Series info
+var seriesTitle = '';
+var seriesPart = '';
+var seriesLink = '';
+
+// AO3's series metadata is in a <dd class="series">
+// Look for the actual series link rather than navigation links.
+var $seriesDd = $('dd.series').first();
+
+if ($seriesDd.length) {
+  var $seriesAnchor = $seriesDd.find('a[href*="/series/"]').first();
+
+  if ($seriesAnchor.length) {
+    seriesTitle = $seriesAnchor.text().trim();
+
+    var seriesHref = $seriesAnchor.attr('href') || '';
+    seriesLink = seriesHref.indexOf('http') === 0
+      ? seriesHref
+      : 'https://archiveofourown.org' + seriesHref;
+
+    // Extract "Part 3" from the surrounding series text.
+    var seriesText = $seriesDd.text().trim();
+    var partMatch = seriesText.match(/Part\s+(\d+)/i);
+    seriesPart = partMatch ? partMatch[1] : '';
+  }
+}
 
     // Completion status, derived from "current/total" chapter count (e.g. "34/34" vs "20/?")
     var status = '';
