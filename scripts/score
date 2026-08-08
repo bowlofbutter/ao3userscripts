@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name        AO3: Quality score
+// @name        AO3 Quality score
 // @description Uses the kudos/hits ratio, number of chapters, and statistical evaluation to score and sort AO3 works. All credits goes to Min_ and cupkax at Greasyfork  I just modified the script for personal use to insert color coded symbols and removed the background highlight.
 // @icon        https://archiveofourown.org/favicon.ico
 // @namespace   https://github.com/bowlofbutter/ao3userscripts
