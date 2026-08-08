@@ -3,6 +3,7 @@
 // @namespace    https://github.com/bowlofbutter/ao3userscripts
 // @version      1.0
 // @description  Opens a small HTML page with the current fic's fields, each in its own element with a CSS class named after the field, for use with "Save to Notion" selector mapping.
+// @icon         https://archiveofourown.org/favicon.ico
 // @match        https://archiveofourown.org/works/*
 // @grant        none
 // @updateURL    https://raw.githubusercontent.com/bowlofbutter/ao3userscripts/main/scripts/export_data.js
