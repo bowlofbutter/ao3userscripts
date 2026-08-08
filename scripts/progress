@@ -3,6 +3,7 @@
 // @namespace    ao3chapterwordcounter-progress
 // @version      1.0
 // @description  Adds word counts to chapter links/stats, and a floating reading-progress indicator weighted by real chapter word counts.
+// @icon         https://archiveofourown.org/favicon.ico
 // @match        https://archiveofourown.org/*/navigate
 // @match        https://archiveofourown.org/*/chapters/*
 // @match        https://archiveofourown.org/works/*
