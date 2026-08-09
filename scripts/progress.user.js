@@ -1,7 +1,9 @@
 // ==UserScript==
 // @name         AO3 Word Count + Reading Progress
 // @namespace    https://github.com/bowlofbutter/ao3userscripts
-// @version      1.1
+// @version      2.0
+// @history 2.0  Added settings menu, icon, colors, position now can be chosen
+// @history 1.0  Adds a floating box kn the bottom-right corner that display progression % based on chapter and overall wordcount. 
 // @description  Adds word counts to chapter links/stats, and a floating reading-progress indicator weighted by real chapter word counts.
 // @author		bowlofbutter
 // @match        https://archiveofourown.org/*/navigate
@@ -29,7 +31,53 @@
   const cacheKeyPrefix = 'ao3-word-count-cache-';
   const cacheDurationMs = 30 * 24 * 60 * 60 * 1000;
 
-  // ---------- shared word-count helpers (from original script) ----------
+  // ---------- settings (persisted, editable via the AO3 header menu) ----------
+
+  const SETTINGS_KEY = 'ao3-progress-settings';
+  const defaultSettings = {
+    icon: '💠',
+    textColor: '#B4C8CE',
+    bgColor: '#252542',
+    barColor: '#e49494',
+    position: 'bottom-right', // bottom-right | bottom-left | top-right | top-left
+    autoHideIdle: false,
+  };
+
+  function loadSettings() {
+    try {
+      const raw = localStorage.getItem(SETTINGS_KEY);
+      return raw ? Object.assign({}, defaultSettings, JSON.parse(raw)) : Object.assign({}, defaultSettings);
+    } catch (e) {
+      return Object.assign({}, defaultSettings);
+    }
+  }
+
+  function saveSettingsToStorage(s) {
+    localStorage.setItem(SETTINGS_KEY, JSON.stringify(s));
+  }
+
+  function hexToRgba(hex, alpha) {
+    const h = hex.replace('#', '');
+    const full = h.length === 3 ? h.split('').map((c) => c + c).join('') : h;
+    const bigint = parseInt(full, 16);
+    const r = (bigint >> 16) & 255;
+    const g = (bigint >> 8) & 255;
+    const b = bigint & 255;
+    return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+  }
+
+  function positionStyles(position) {
+    switch (position) {
+      case 'bottom-left': return 'bottom:16px; left:16px;';
+      case 'top-right': return 'top:16px; right:16px;';
+      case 'top-left': return 'top:16px; left:16px;';
+      default: return 'bottom:16px; right:16px;';
+    }
+  }
+
+  let settings = loadSettings();
+
+  // ---------- shared word-count helpers ----------
 
   const getCachedWordCount = (href) => {
     const cacheKey = cacheKeyPrefix + href;
@@ -102,9 +150,153 @@
     }
   };
 
+  // ---------- header settings menu (added on any matched page) ----------
+
+  function buildSettingsMenu(onSave) {
+    const navList = document.querySelector('ul.primary.navigation.actions')
+      || document.querySelector('ul.primary.navigation');
+    if (!navList || document.getElementById('ao3-progress-settings-item')) return;
+
+    const li = document.createElement('li');
+    li.className = 'dropdown';
+    li.id = 'ao3-progress-settings-item';
+
+    const toggle = document.createElement('a');
+    toggle.href = '#';
+    toggle.textContent = 'Progress ⚙';
+    toggle.setAttribute('data-toggle', 'dropdown');
+    toggle.addEventListener('click', (e) => e.preventDefault());
+
+    const menu = document.createElement('ul');
+    menu.className = 'menu dropdown-menu';
+    menu.style.cssText = 'padding:10px; min-width:230px; box-sizing:border-box; overflow:hidden;';
+
+    function addRow(labelText, inputEl) {
+      const row = document.createElement('li');
+      row.style.cssText = '        padding:4px 8px;        display:flex;        align-items:center;        gap:8px;        list-style:none;';
+      const label = document.createElement('label');
+      label.textContent = labelText;
+
+      label.style.cssText = '  font-size:12px;  flex:1;  text-align:left;';
+       inputEl.style.marginLeft = 'auto';
+
+      row.appendChild(label);
+      row.appendChild(inputEl);
+      row.addEventListener('click', (e) => e.stopPropagation());
+      menu.appendChild(row);
+    }
+
+    // Color inputs styled as a filled swatch box (matches the color currently set)
+    function styleColorSwatch(input) {
+      input.style.cssText = `
+        width: 40px;
+        height: 26px;
+        padding: 0;
+        margin: 0;
+        border: 1px solid rgba(0,0,0,0.3);
+        border-radius: 3px;
+        cursor: pointer;
+        background: none;
+        box-sizing: border-box;
+      `;
+    }
+
+    const iconInput = document.createElement('input');
+    iconInput.type = 'text';
+    iconInput.maxLength = 2;
+    iconInput.value = settings.icon;
+    iconInput.style.cssText = 'width:40px; height:26px; box-sizing:border-box; text-align:center;';
+    addRow('Icon', iconInput);
+
+    const textColorInput = document.createElement('input');
+    textColorInput.type = 'color';
+    textColorInput.value = settings.textColor;
+    styleColorSwatch(textColorInput);
+    addRow('Text color', textColorInput);
+
+    const bgColorInput = document.createElement('input');
+    bgColorInput.type = 'color';
+    bgColorInput.value = settings.bgColor;
+    styleColorSwatch(bgColorInput);
+    addRow('Background', bgColorInput);
+
+    const barColorInput = document.createElement('input');
+    barColorInput.type = 'color';
+    barColorInput.value = settings.barColor;
+    styleColorSwatch(barColorInput);
+    addRow('Progress bar', barColorInput);
+
+    const positionSelect = document.createElement('select');
+    ['bottom-right', 'bottom-left', 'top-right', 'top-left'].forEach((pos) => {
+      const opt = document.createElement('option');
+      opt.value = pos;
+      opt.textContent = pos.replace('-', ' ');
+      if (pos === settings.position) opt.selected = true;
+      positionSelect.appendChild(opt);
+    });
+    addRow('Position', positionSelect);
+
+    const autoHideInput = document.createElement('input');
+    autoHideInput.type = 'checkbox';
+    autoHideInput.checked = !!settings.autoHideIdle;
+    addRow('Auto-hide when idle', autoHideInput);
+
+    const saveBtn = document.createElement('button');
+    saveBtn.textContent = 'Save';
+    saveBtn.type = 'button';
+    saveBtn.style.cssText = '  margin-top:6px;  width:100%; height:auto; box-sizing:border-box;  cursor:pointer;  white-space:nowrap;  font-size:12px;  padding:4px 8px;';
+    saveBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      settings = {
+        icon: iconInput.value || defaultSettings.icon,
+        textColor: textColorInput.value,
+        bgColor: bgColorInput.value,
+        barColor: barColorInput.value,
+        position: positionSelect.value,
+        autoHideIdle: autoHideInput.checked,
+      };
+      saveSettingsToStorage(settings);
+      if (onSave) onSave();
+    });
+    const saveRow = document.createElement('li');
+    saveRow.style.cssText = 'padding:4px 8px; box-sizing:border-box; list-style:none;';
+    saveRow.appendChild(saveBtn);
+    saveRow.addEventListener('click', (e) => e.stopPropagation());
+    menu.appendChild(saveRow);
+
+    const resetBtn = document.createElement('button');
+    resetBtn.textContent = 'Reset to defaults';
+    resetBtn.type = 'button';
+    resetBtn.style.cssText = '  margin-top:6px;  width:100%;  height:auto; box-sizing:border-box;  cursor:pointer;  white-space:nowrap;  font-size:12px;  padding:4px 8px;';
+    resetBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      settings = Object.assign({}, defaultSettings);
+      saveSettingsToStorage(settings);
+      iconInput.value = settings.icon;
+      textColorInput.value = settings.textColor;
+      bgColorInput.value = settings.bgColor;
+      barColorInput.value = settings.barColor;
+      positionSelect.value = settings.position;
+      autoHideInput.checked = settings.autoHideIdle;
+      if (onSave) onSave();
+    });
+    const resetRow = document.createElement('li');
+    resetRow.style.cssText = 'padding:4px 8px; box-sizing:border-box; list-style:none;';
+    resetRow.appendChild(resetBtn);
+    resetRow.addEventListener('click', (e) => e.stopPropagation());
+    menu.appendChild(resetRow);
+
+    li.appendChild(toggle);
+    li.appendChild(menu);
+    navList.appendChild(li);
+  }
+
   // ---------- chapter index page: add word counts to links ----------
 
   if (uri.endsWith('navigate')) {
+    buildSettingsMenu(null);
     const chapterLinks = document.querySelectorAll('ol.chapter.index.group li a');
     if (chapterLinks.length) {
       const parentWidth = chapterLinks[0].parentElement.getBoundingClientRect().width;
@@ -150,11 +342,7 @@
   box.id = 'ao3-progress-box';
   box.style.cssText = `
     position: fixed;
-    bottom: 16px;
-    right: 16px;
     z-index: 999999;
-    background: rgba(37, 37, 66, 0.85);
-    color: #B4C8CE;
     font-family: -apple-system, sans-serif;
     font-size: 12px;
     line-height: 1.4;
@@ -162,11 +350,11 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.3);
     cursor: pointer;
     user-select: none;
+    opacity: 1;
+    transition: opacity 0.4s;
   `;
 
-  // collapsed view: small round symbol, shown by default
   const collapsedView = document.createElement('div');
-  collapsedView.textContent = '💠';
   collapsedView.style.cssText = `
     width: 36px;
     height: 36px;
@@ -176,7 +364,6 @@
     font-size: 16px;
   `;
 
-  // expanded view: full details, hidden by default
   const expandedView = document.createElement('div');
   expandedView.style.cssText = `
     display: none;
@@ -189,7 +376,7 @@
   const barOuter = document.createElement('div');
   barOuter.style.cssText = 'margin-top:4px; height:4px; background:rgba(255,255,255,0.2); border-radius:2px; overflow:hidden;';
   const barInner = document.createElement('div');
-  barInner.style.cssText = 'height:100%; width:0%; background:#e49494; transition: width 0.15s;';
+  barInner.style.cssText = 'height:100%; width:0%; transition: width 0.15s;';
   barOuter.appendChild(barInner);
   expandedView.appendChild(chapterNumLine);
   expandedView.appendChild(chapterPctLine);
@@ -201,11 +388,47 @@
   document.body.appendChild(box);
 
   let expanded = false;
+
+  const IDLE_TIMEOUT_MS = 3000;
+  const IDLE_OPACITY = '0.35';
+  let idleTimer = null;
+
+  function resetIdleTimer() {
+    clearTimeout(idleTimer);
+    box.style.opacity = '1';
+    if (!settings.autoHideIdle || expanded) return;
+    idleTimer = setTimeout(() => {
+      if (!expanded) box.style.opacity = IDLE_OPACITY;
+    }, IDLE_TIMEOUT_MS);
+  }
+
+  function applyBoxSettings() {
+    box.style.position = 'fixed';
+    box.style.top = '';
+    box.style.bottom = '';
+    box.style.left = '';
+    box.style.right = '';
+    const posDecl = positionStyles(settings.position);
+    posDecl.split(';').filter(Boolean).forEach((decl) => {
+      const [prop, val] = decl.split(':').map((s) => s.trim());
+      box.style[prop] = val;
+    });
+    box.style.background = hexToRgba(settings.bgColor, 0.85);
+    box.style.color = settings.textColor;
+    collapsedView.textContent = settings.icon;
+    barInner.style.background = settings.barColor;
+    resetIdleTimer();
+  }
+
   box.addEventListener('click', () => {
     expanded = !expanded;
     collapsedView.style.display = expanded ? 'none' : 'flex';
     expandedView.style.display = expanded ? 'block' : 'none';
+    resetIdleTimer();
   });
+
+  applyBoxSettings();
+  buildSettingsMenu(applyBoxSettings);
 
   const workIdMatch = location.pathname.match(/works\/(\d+)/);
   const workId = workIdMatch ? workIdMatch[1] : null;
@@ -274,6 +497,7 @@
 
   let ticking = false;
   window.addEventListener('scroll', () => {
+    resetIdleTimer();
     if (!ticking) {
       requestAnimationFrame(() => {
         render();
@@ -286,7 +510,6 @@
 
   render();
 
-  // background-fill missing chapter word counts (throttled via shared fetch queue)
   if (totalChapters > 1) {
     chapterMeta.forEach((m) => {
       if (m.words === null || m.words === undefined) {
